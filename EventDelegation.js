@@ -3,7 +3,7 @@
   <li id="shirt">Shirt</li>
   <li id="Pant">Pant</li>
   <li id="Wallet">Wallet</li>
-</div>;
+</div>
 
 //we no need to add listener for each products that will fill our webpage completely with these events and its gonna take lot of memory
 
