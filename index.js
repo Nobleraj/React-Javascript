@@ -1,0 +1,124 @@
+// Import stylesheets
+import './style.css';
+import ClassExam from './classExample';
+
+// Write Javascript code!
+const appDiv = document.getElementById('app');
+appDiv.innerHTML = `<h1>JS Starter</h1>`;
+
+//class inheritance
+let par = new ClassExam('Imm', ' pri', 'demo');
+console.log(par.run());
+
+//var , let , const
+(function () {
+  setTimeout(() => {
+    console.log(x);
+    console.log(y);
+  }, 3000);
+  const x = 2;
+  const y = 10;
+})();
+
+//Closure
+function temp(a) {
+  return (b) => {
+    return 'Good ' + a + ' ' + b;
+  };
+}
+let noble = temp('Morning');
+let raj = temp('Morning');
+
+let n_ = noble('Noble');
+let r_ = raj('Raj');
+console.log(n_, ' - ', r_);
+
+//primises
+let promise = new Promise((res, rej) => {
+  res('Resolved');
+});
+promise.then((val) => {
+  console.log('promies ' + val);
+});
+
+//aysnc function
+async function dynamic() {
+  return 'function';
+}
+dynamic().then((val) => {
+  console.log('Async ' + val);
+});
+
+//aysnc await function
+async function dynamic_async() {
+  let res = await new Promise((res, rej) => {
+    {
+      rej('Promises failed from await');
+      res('Promises resolved from await');
+    }
+  });
+  return res;
+}
+dynamic_async()
+  .then((val) => {
+    console.log('Async Await ' + val);
+  })
+  .catch((err) => {
+    console.log('Async Await ' + err);
+  });
+
+//prototype
+var Proto_simple = function (y) {
+  this.x = 0;
+  this.y = y;
+
+  this.obj = function () {
+    return this.y;
+  };
+};
+var x1 = new Proto_simple(5);
+var x2 = new Proto_simple(10);
+console.log('Proto simple ', x1.obj(), x2.obj());
+
+//prototype dynamic
+var Proto_dyn = function (y) {
+  this.x = 0;
+  this.y = y;
+};
+Proto_dyn.prototype.obj = function () {
+  return this.y;
+};
+var x3 = new Proto_dyn(55);
+var x4 = new Proto_dyn(105);
+console.log('Proto dyn ', x3.obj(), x4.obj());
+
+
+//let , var scope
+let testing = 40;
+var testing2 = 60;
+if (true) {
+  let testing = 20;
+  var testing2 = 70;
+  console.log('let scope in', testing);
+  console.log('var scope in', testing2);
+}
+console.log('let scope ', testing);
+console.log('var scope ', testing2);
+
+//args check
+function demo(x){ 
+  console.log(typeof x, arguments.length); 
+};
+demo("a","b","c");
+
+//timeout
+(function (){
+console.log('1');
+setTimeout(()=>{
+console.log('2');
+},1000);
+setTimeout(()=>{
+console.log('3');
+},0);
+console.log('4');
+})();
