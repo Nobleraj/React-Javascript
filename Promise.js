@@ -70,3 +70,7 @@ myPromiseAll([showText('Noble', 1000), prom1, Promise.resolve('Demo')]).then(
 
 //Promise all settled - it takes bunch of promises and return promises with the resolved results if it either fullfilled or rejected, with arary of objects.
 //[ { status: "fullfilled", value : "some value"}, { status: "rejected", reason : "some reason"}]
+
+//Promise.race - it wont wait all the promises to resolve, it resolve when the first promises resoved
+
+//Observables
