@@ -73,4 +73,24 @@ myPromiseAll([showText('Noble', 1000), prom1, Promise.resolve('Demo')]).then(
 
 //Promise.race - it wont wait all the promises to resolve, it resolve when the first promises resoved
 
-//Observables
+//Observables - Observalble can return multiple values and it behave like arrays. we can filter
+const obs = new Rx.Observable((ob) => {
+  ob.next('Dog');
+  ob.next('Bird');
+  ob.next('Man');
+});
+obs.subscribe((res) => {
+  console.log('res', res);
+});
+//filter
+obs
+  .filter((val) => val == 'Bird')
+  .subscribe((res) => {
+    console.log('res', res);
+  });
+
+//save ref to subscription and we can unsubscribe the obsevables
+const subscribe = obs.subscribe((res) => {
+  console.log('res', res);
+});
+subscribe.unsubscribe();
