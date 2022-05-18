@@ -94,3 +94,28 @@ const subscribe = obs.subscribe((res) => {
   console.log('res', res);
 });
 subscribe.unsubscribe();
+
+//Promise vs async await
+const prom = (a, b, c) => {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      res(a + b + c);
+    }, 1000);
+  });
+};
+
+prom(1, 2, 3)
+  .then((val) => prom(val, 12, 13))
+  .then((res) => {
+    console.log('promise', res);
+  });
+
+const ayy = async () => {
+  const sum = await prom(1, 2, 3);
+  const sum2 = await prom(sum, 12, 13);
+  return sum2;
+};
+
+ayy().then((val) => {
+  console.log('res', val);
+});
