@@ -24,3 +24,8 @@ const a = 1;
 //Hosting - normal function differ form arrow function
 //if we assign the function to var variable and called before initialization we get undefined
 // if we assign the function with let or const variable and called before initialization we get reference error
+
+//Differencr
+import { item } from '..'; //name export, we are exporing specific component from specific name
+vs;
+import item from ''; //default export we are import
