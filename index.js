@@ -2,6 +2,13 @@
 import './style.css';
 import ClassExam from './classExample';
 
+let a = 1;
+console.log('output', +f + a + 1); //output 10
+
+var f = '8';
+let a = 1;
+console.log('output', f + a + 1); //output 811
+
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
