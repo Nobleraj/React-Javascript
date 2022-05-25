@@ -2,12 +2,28 @@
 import './style.css';
 import ClassExam from './classExample';
 
+//output based
+
+//print 1 to 10 on every 1 seconds
+for (let i = 1; i <= 10; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, i * 1000);
+}
+
 let a = 1;
 console.log('output', +f + a + 1); //output 10
 
 var f = '8';
 let a = 1;
 console.log('output', f + a + 1); //output 811
+
+if (0.1 + 0.2 === 0.3) {
+  alert('Yes');
+} else {
+  alert('No');
+} //output No - 0.1 + 0.2 will be 0.30000
+//ends
 
 // Write Javascript code!
 const appDiv = document.getElementById('app');
@@ -99,7 +115,6 @@ var x3 = new Proto_dyn(55);
 var x4 = new Proto_dyn(105);
 console.log('Proto dyn ', x3.obj(), x4.obj());
 
-
 //let , var scope
 let testing = 40;
 var testing2 = 60;
@@ -113,19 +128,19 @@ console.log('let scope ', testing);
 console.log('var scope ', testing2);
 
 //args check
-function demo(x){ 
-  console.log(typeof x, arguments.length); 
-};
-demo("a","b","c");
+function demo(x) {
+  console.log(typeof x, arguments.length);
+}
+demo('a', 'b', 'c');
 
 //timeout
-(function (){
-console.log('1');
-setTimeout(()=>{
-console.log('2');
-},1000);
-setTimeout(()=>{
-console.log('3');
-},0);
-console.log('4');
+(function () {
+  console.log('1');
+  setTimeout(() => {
+    console.log('2');
+  }, 1000);
+  setTimeout(() => {
+    console.log('3');
+  }, 0);
+  console.log('4');
 })();
