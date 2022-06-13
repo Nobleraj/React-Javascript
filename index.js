@@ -3,6 +3,46 @@ import './style.css';
 import ClassExam from './classExample';
 
 //output based
+let ob1 = { name: 'hello' };
+let ob2 = { name: 'hello' };
+console.log(ob1 == ob2, ob1 === ob2); //both false
+
+function demo() {
+  function a() {
+    return 10;
+  }
+  return a();
+  function a() {
+    return 222;
+  }
+} // 222
+
+(function (a) {
+  return (function () {
+    console.log(a);
+    a = 6;
+  })();
+})(21); //21
+
+function React(b, l) {
+  this.l = l;
+  this.b = b;
+
+  this.react = function () {
+    return this.l * this.b;
+  };
+}
+undefined;
+React.prototype.react1 = function () {
+  return this.l * this.b;
+};
+React.prototype.react2 = () => {
+  return this.l * this.b;
+};
+let r = new React(5, 2);
+r.react(); //10
+r.react1(); //10
+r.react2(); //NAN
 
 //print 1 to 10 on every 1 seconds
 for (let i = 1; i <= 10; i++) {
