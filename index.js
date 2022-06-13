@@ -24,6 +24,9 @@ function demo() {
   })();
 })(21); //21
 
+let ar = [-1, 0, 2, 1, 6, -1, 4, 8, 0, -1, -100, 0, -0, 0];
+ar.filter((a) => a); //[-1, 2, 1, 6, -1, 4, 8, -1, -100]
+
 function React(b, l) {
   this.l = l;
   this.b = b;
@@ -32,7 +35,6 @@ function React(b, l) {
     return this.l * this.b;
   };
 }
-undefined;
 React.prototype.react1 = function () {
   return this.l * this.b;
 };
