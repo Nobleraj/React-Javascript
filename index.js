@@ -3,6 +3,19 @@ import './style.css';
 import ClassExam from './classExample';
 
 //output based
+const fnc = (function(a){
+   delete a;
+   return a;
+})(5); //output 5
+console.log(fnc);
+
+const a = {};
+const b = { key : "b" };
+const c = { key : "c" };
+a[b] = 123; // a[b] equals [object Object]
+a[c] = 456
+console.log(a[b]);//output 456
+
 let ob1 = { name: 'hello' };
 let ob2 = { name: 'hello' };
 console.log(ob1 == ob2, ob1 === ob2); //both false
