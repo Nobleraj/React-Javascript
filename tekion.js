@@ -45,3 +45,47 @@ async function test() {
 }
 
 test();
+
+//Generate 2D array
+
+//HTML
+<table id="matrix"></table>;
+//css
+/* tbody{
+  display : flex;
+  flex-direction : column-reverse;
+}
+tbody tr{
+  display : flex;
+  justify-content : space-between;
+}
+tbody tr:nth-child(even){
+  flex-direction : row-reverse;
+}
+td{
+  cursor : pointer;
+} */
+//Javascript
+function matrix(n) {
+  let divId = document.getElementById('matrix');
+  for (var i = 0; i < n; i++) {
+    let row = divId.insertRow(i);
+    for (var j = 0; j < n; j++) {
+      let res = i * n + j;
+      let column = row.insertCell(j);
+      column.id = res;
+      column.innerHTML = res;
+    }
+  }
+}
+document.getElementById('matrix').addEventListener('click', function (e) {
+  if (e.target.tagName == 'TD') {
+    let id = e.target.id;
+    let count = 0;
+    for (var i = 0; i <= Number(id); i++) {
+      count += Number(document.getElementById(i).innerHTML);
+    }
+    e.target.innerHTML = count;
+  }
+});
+matrix(4);
