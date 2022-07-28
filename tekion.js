@@ -89,3 +89,57 @@ document.getElementById('matrix').addEventListener('click', function (e) {
   }
 });
 matrix(4);
+
+//2D array using div
+//HTML
+<div id="matrix"></div>;
+//css
+/* 
+#matrix{
+  display : flex;
+  flex-direction : column-reverse;
+  width : 200px;
+  align-items : flex-start;
+}
+.tr{
+  display : flex;
+}
+.tr:nth-child(even){
+  flex-direction : row-reverse;
+}
+.cell{
+  padding : 10px;
+  cursor : pointer;
+} */
+function matrix(n) {
+  let matrix = document.getElementById('matrix');
+
+  for (var i = 0; i < n; i++) {
+    let row = document.createElement('div');
+    row.className = 'row';
+    for (var j = 0; j < n; j++) {
+      let clm = document.createElement('div');
+      let res = n * i + j;
+      clm.id = res;
+      clm.className = 'cell';
+      clm.innerHTML = res;
+      row.appendChild(clm);
+    }
+    matrix.appendChild(row);
+  }
+}
+
+document.getElementById('matrix').addEventListener('click', function (e) {
+  if (e.target.className == 'cell') {
+    let elem = e.target;
+    let value = Number(elem.id);
+    let cnt = 0;
+    for (var i = 1; i <= value; i++) {
+      let b = document.getElementById(i).innerHTML;
+      cnt += Number(b);
+    }
+    elem.innerHTML = cnt;
+  }
+});
+
+matrix(4);
