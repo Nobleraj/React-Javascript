@@ -31,6 +31,40 @@ const elem = ['a', 'b'];
 
 console.log('append', array.push.apply(array, elem));
 
+//Find min max
+console.log('Max ', Math.max.apply(null, array));
+console.log('Min ', Math.min.apply(null, array));
+
+//Custom call apply and bind
+Function.prototype.myCall = function (context = {}, ...args) {
+  if (typeof this != 'function') {
+    throw new Error(this + ' not callable');
+  }
+  context.fn = this;
+  context.fn(...args);
+};
+
+Function.prototype.myApply = function (context = {}, args) {
+  if (typeof this != 'function') {
+    throw new Error(this + ' not callable');
+  }
+  if (!Array.isArray(args)) {
+    throw new TypeError('CreateListFromArray like called on non object');
+  }
+  context.fn = this;
+  context.fn(...args);
+};
+
+Function.prototype.myBind = function (context = {}, ...args) {
+  if (typeof this != 'function') {
+    throw new Error(this + ' not callable');
+  }
+  context.fn = this;
+  return function (...newArg) {
+    return context.fn(...args, ...newArg);
+  };
+};
+
 //1.
 const person = { name: 'Coder' };
 
