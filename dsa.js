@@ -44,3 +44,31 @@ function anagram(str1, str2) {
   return true;
 }
 console.log('Is Anagram', anagram('abcde', 'edbac'));
+
+//this - basically behave in different manner, it depends  upon the environment where it is getting invoked invoked
+
+//Find loop in Linked list
+class LinkedList {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+let head = new LinkedList(10);
+let temp1 = new LinkedList(20);
+let temp2 = new LinkedList(30);
+head.next = temp1;
+temp1.next = temp2;
+temp2.next = null;
+//10 > 20 > 30 > 10 > 20 > 30 > 10
+function findLoop(A) {
+  let fast = A,
+    slow = A;
+  while (fast && fast.next) {
+    fast = fast.next.next;
+    slow = slow.next;
+    if (slow == fast) return true;
+  }
+  return false;
+}
+console.log('Loop in linked list', findLoop(head));
