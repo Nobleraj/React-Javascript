@@ -119,3 +119,37 @@ const ayy = async () => {
 ayy().then((val) => {
   console.log('res', val);
 });
+
+//CallBack Hell and Promises ans async await
+const multiply2 = (num, cb) => {
+  /*setTimeout(()=>{
+      //cb(num * 2);
+  },1000)*/
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      res(num * 2);
+    }, 1000);
+  });
+};
+
+const multiply = async (num) => {
+  multiply2(num, (res) => {
+    multiply2(res, (res1) => {
+      multiply2(res1, (res2) => {
+        console.log('callback hell', res2);
+      });
+    });
+  });
+  multiply2(num).then((res) =>
+    multiply2(res).then((res) =>
+      multiply2(res).then((res) => console.log('primises', res))
+    )
+  );
+
+  const res = await multiply2(num);
+  const res1 = await multiply2(res);
+  const res2 = await multiply2(res1);
+  console.log('async await', res2);
+};
+
+multiply(100);
