@@ -2,6 +2,17 @@
 import './style.css';
 import ClassExam from './classExample';
 
+//Destructure
+let user = {
+  name : "Noble",
+  address : {
+      street : 20,
+      age : 40
+  }
+}
+const { name , address : { street, age } } = user;
+console.log("Destructure", user);
+
 //output based
 const fnc = (function(a){
    delete a;
