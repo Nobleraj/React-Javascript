@@ -38,3 +38,12 @@ DOMContentLoaded vs onload
 //browser cache -> OS cache -> Router cache -> ISP(Internet service provider)cache -> if in office Proxy server cache -> DNS (mapping ip)
 
 //Pagespeed insights - FCP, LCP
+
+
+//axios
+//redux flow
+//curring simplify
+//second max array
+//posible accordin
+//fibanocci with memorization
+//excel problem
