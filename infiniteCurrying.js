@@ -11,6 +11,18 @@ ReactDOM.hydrate();
 //Box- Sizing
 content-box, border-box
 
+//By default,the width and height of an element is calculated like this:
+//width + padding + border = actual width of an element
+//height + padding + border = actual height of an element
+
+//box-sizing: border-box; on an element, padding and border are included in the width and height
+
+//200 - 5 * 2 - 10 * 2 = 170px
+
+//content-box
+//Width and height only apply to the content of the element
+// div has a width of 300px. But the full width is 300px + 20px (left and right border) + 60px (left and right padding) = 380px!
+
 //== vs ===
 //loose equality(type conversion) vs strict equality(runs faster)
 
