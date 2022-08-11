@@ -23,6 +23,7 @@ DOMContentLoaded vs onload
 //AddBLocker - is plugin that blocks the request that downloads the content
 
 //What happens when we type url in browser and Enter
+//browser cache -> OS cache -> Router cache -> ISP(Internet service provider)cache -> if in office Proxy server cache -> DNS (mapping ip)
 
 //Pagespeed insights - FCP, LCP
 
