@@ -72,3 +72,16 @@ function findLoop(A) {
   return false;
 }
 console.log('Loop in linked list', findLoop(head));
+
+//Lexicographically largest string
+function largestString(n) {
+  let ans = '';
+  while (n > 26) {
+    ans += 'z';
+    n -= 26;
+  }
+  ans += String.fromCharCode(n + 'a'.charCodeAt() - 1);
+  return ans;
+}
+
+console.log('largest string', largestString(17));
