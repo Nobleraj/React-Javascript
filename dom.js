@@ -41,9 +41,17 @@ DOMContentLoaded vs onload
 
 
 //axios
-//redux flow
-//curring simplify
 //second max array
-//posible accordin
-//fibanocci with memorization
-//excel problem
+function secondMax(ar){
+  let max = -Infinity;
+  let secondmax = max;
+  for(var i=0;i<ar.length;i++){
+      if(ar[i]>max){
+          secondMax = max;
+          max = ar[i];
+      }else if(ar[i]>secondMax){
+          secondMax = ar[i];
+      }
+  }
+  return secondMax;
+}
