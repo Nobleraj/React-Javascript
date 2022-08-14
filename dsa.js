@@ -86,6 +86,23 @@ function largestString(n) {
 
 console.log('largest string', largestString(17));
 
+//Panagram - Having all the letters in english alphebets
+const panagram = (str) => {
+  let ans = new Array(26).fill(false);
+  for (var i = 0; i < str.length; i++) {
+    if (str[i]) {
+      var ind = str[i].charCodeAt() - ('a'.charCodeAt() - 1);
+      ans[ind - 1] = true;
+    }
+  }
+  for (var i = 0; i < ans.length; i++) {
+    if (!ans[i]) return false;
+  }
+  return true;
+};
+
+console.log('Panagram', panagram('bcdefghijklmnopqrstuvwxyz'));
+
 //Find sum of all left BST
 //For right BST change left to right
 class LinkedList {
