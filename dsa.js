@@ -85,3 +85,37 @@ function largestString(n) {
 }
 
 console.log('largest string', largestString(17));
+
+//Find sum of all left BST
+//For right BST change left to right
+class LinkedList {
+  constructor(data) {
+    this.data = data;
+    this.left = null;
+    this.right = null;
+  }
+}
+let head = new LinkedList(10);
+head.left = new LinkedList(20);
+head.right = new LinkedList(30);
+head.left.left = new LinkedList(40);
+head.left.right = new LinkedList(50);
+
+function isLeaf(node) {
+  if (node == null) return false;
+  return node.left == null && node.right == null;
+}
+
+function leftBST(root) {
+  let res = 0;
+  if (root) {
+    if (isLeaf(root.left)) {
+      res += root.left.data;
+    } else {
+      res += leftBST(root.left);
+    }
+    res += leftBST(root.right);
+  }
+  return res;
+}
+console.log('Left BST', leftBST(head));
