@@ -95,3 +95,24 @@ function createTable(){
     </body>
 </html>
 `
+
+`<input id="d" type="range" value="10"/>
+<div class="piechart" style="--percentage:5%"></div>
+
+#d{
+  width : 300px;
+  height : 20px;
+}
+.piechart{
+  width : 200px;
+  height : 200px;
+  background-image : conic-gradient(green
+  var(--percentage), lightgreen 0);
+  border-radius : 50%
+}
+
+let elem = document.querySelector(".piechart");
+document.getElementById("d").addEventListener("input",function(e){
+  elem.style = `--percentage:${e.target.value}%`
+})
+`
