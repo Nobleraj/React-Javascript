@@ -210,3 +210,17 @@ demo('a', 'b', 'c');
   }, 0);
   console.log('4');
 })();
+
+//object flow
+let cal = {
+  total : 0,
+  sum : function(a,b){
+      this.total+=a+b;
+      return this;
+  },
+  mul : function(a){
+      this.total*=a;
+      return this;
+  }
+}
+cal.sum(4,5).mul(4).total;
