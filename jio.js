@@ -10,3 +10,5 @@
 //Log component in parent - 3 child component - print those names
 
 //useSelector detect the chages from redux
+
+//Promise.any
