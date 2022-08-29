@@ -23,4 +23,7 @@ Double Character Trouble - [3,1,1,3,4]
 Sort Stack using another stack - Until stack 1 empty, just pop and push values to another stack untill its sorted
 Min stack - push min to another stack and maintain
 Max Frequency stack - dynamic 
+
+Nearest smaller elements - maintain stack top as smaller if not pop untill its smaller
+a = [4,6,10,11,7,8,3,5]
 */
