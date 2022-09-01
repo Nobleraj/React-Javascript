@@ -71,7 +71,9 @@ myPromiseAll([showText('Noble', 1000), prom1, Promise.resolve('Demo')]).then(
 //Promise all settled - it takes bunch of promises and return promises with the resolved results if it either fullfilled or rejected, with arary of objects.
 //[ { status: "fullfilled", value : "some value"}, { status: "rejected", reason : "some reason"}]
 
-//Promise.race - it wont wait all the promises to resolve, it resolve when the first promises resoved
+//Promise.race - it wont wait all the promises to fullfilled or rejected, it resolve when the first promises fullfilled or rejected
+
+//Promise.any - it wont wait all the promises to fullfilled, it resolve when the first promises fullfilled
 
 //Observables - Observalble can return multiple values and it behave like arrays. we can filter
 const obs = new Rx.Observable((ob) => {
