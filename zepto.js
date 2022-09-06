@@ -38,49 +38,55 @@ console.log(b)
   bar();
 })();
 
-
-const prom1 = Promise.resolve("Success 1");
-function showText(){
-return new Promise((res,rej)=>{
-  setTimeout(()=>{
-    res("Success 2");
-  },2000);
-})
+//Promise All settled
+let prom1 = Promise.resolve("success 1");
+function showText(txt){
+    return new Promise((res,rej)=>{
+        setTimeout(()=>res(txt),2000);
+    })
 }
-//showText().then(val=>console.log('test',val))
-const prom2 = ()=>{
-return new Promise((res,rej)=>{
-  setTimeout(()=>{
-    res("Success 3");
-  },1000);
-})
-};
-const prom3 = Promise.reject("Rejected");
+let prom2 = Promise.resolve("success 2");
+let prom3 = Promise.reject("Rejected");
+
+//simple
+function myPromiseAllSettled(promises){
+  const mappedPromise = promises.map(pro=>{
+    return pro.then(res=>{
+      return {
+        status : 'fullfilled',
+        value : res
+      }
+    }).catch(err=>{
+      return {
+        status : 'fullfilled',
+        reason : err
+      }
+    })
+  })
+  return Promise.all(mappedPromise);
+}
 
 
 function myPromiseAllSettled(promises){
- console.log(promises);
- let result = [];
+ let result = [],completed = 0;
  return new Promise((res,rej)=>{
-    promises.forEach((promise,indx)=>{
-       
-         promise.then(res=>{
-         result.push({ status:"fulfilled",value : res });
-         if(indx==promises.length-1){
-           res(result);
+    promises.forEach((promise,i)=>{    
+         promise.then(r=>{
+         result[i]={status:"fulfilled",value : r };
+         completed++;
+         if(completed == promises.length){
+         res(result);
          }
          }).catch(err=>{
-         result.push({ status:"rejected",reason : err});
-         if(indx==promises.length-1){
-           res(result);
-        }
+         completed++;
+         result[i]={ status:"rejected",reason : err};
+          if(completed == promises.length){
+         res(result);
+         }
          });
-        console.log("Index ", indx, "Promise",promise, "result", result) 
-        
-    })
-    
+    });
  })
 }
-myPromiseAllSettled([prom1,showText(),prom2(),prom3]).then(result=>{
-console.log("Result", result);
+myPromiseAllSettled([prom1,showText("Hello"),prom2,prom3]).then(res=>{
+  console.log("res", res);
 })
