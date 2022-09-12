@@ -1,3 +1,5 @@
+//Promise basically represents the upcoming completion or a failure of an async events and its resulting value.
+
 //Promise - We can use it for async operations, it will give you the guarantee results either the response is success or failed.
 
 //to overcome callback hell - Promise comes in
