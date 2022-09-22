@@ -1,3 +1,6 @@
+//Event probagation - 3 phase
+//Capture Target Bubble
+
 //Render to string - it is basically used in server side rendering. In SSR, what happens our html is generated over the server and send to the client.This function(ReactDOMServer.renderToString()) is used to tranfer to send that html as string to the client
 ReactDOMServer.renderToString();
 
