@@ -58,3 +58,7 @@ function secondMax(ar){
   }
   return secondMax;
 }
+
+//Email validation
+var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+reg.test("ewfvefefe");
