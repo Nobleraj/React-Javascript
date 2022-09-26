@@ -27,7 +27,19 @@ function zeroAtEnd(array) {
   return array;
 }
 console.log('ZeroAtEnd ', zeroAtEnd([0, 0, 1, 2, 3, 0, 2]));
-
+//Mover zero to left and 1 to right
+let arr = [1, 0, 0, 1, 1, 0, 1, 0, 1];
+const fun = (arr) => {
+  let indx = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == 0) {
+      [arr[i], arr[indx]] = [arr[indx], arr[i]];
+      indx++;
+    }
+  }
+  return arr;
+};
+console.log('ans', fun(arr));
 //Anagram
 function anagram(str1, str2) {
   if (str1.length != str2.length) return false;
