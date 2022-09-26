@@ -28,3 +28,19 @@ console.log(sum(1, 2, 3)(4, 5));
 console.log(sum(1)(2, 3, 4, 5));
 console.log(sum(1)(2)(3)(4)(5));
 console.log(sum(1)(2)(3)(4)(5));
+
+//curring function that returns sum of previos value
+const curring = () => {
+  let prev = 0;
+  return (newValue = 0) => {
+    prev += newValue;
+    return prev;
+  };
+};
+const add = curring();
+
+console.log(add(1));
+console.log(add(5));
+console.log(add(4));
+console.log(add());
+console.log(add(1));
