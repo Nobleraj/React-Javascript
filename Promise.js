@@ -157,3 +157,68 @@ const multiply = async (num) => {
 };
 
 multiply(100);
+
+//Promise polyfills
+function myPromise(executor) {
+  let onResolve,
+    onReject,
+    isFullfilled = false,
+    isRejected = false,
+    value;
+  this.then = function (callback) {
+    onResolve = callback;
+    if (isFullfilled) {
+      onResolve(value);
+    }
+    return this;
+  };
+  this.catch = function (callback) {
+    onReject = callback;
+    if (isRejected) {
+      onReject(value);
+    }
+    return this;
+  };
+  function resolve(val) {
+    isFullfilled = true;
+    value = val;
+    if (typeof onResolve === 'function') {
+      onResolve(value);
+    }
+  }
+  function reject(val) {
+    value = val;
+    isRejected = true;
+    if (typeof onReject === 'function') {
+      onReject(value);
+    }
+  }
+  try {
+    executor(resolve, reject);
+  } catch (err) {
+    reject(err);
+  }
+}
+
+const prom1 = new myPromise((res, rej) => {
+  setTimeout(() => {
+    rej('Hello! err');
+  }, 2000);
+});
+
+prom1
+  .then((res) => console.log('result', res))
+  .catch((err) => console.log(err));
+
+//Polyfills for Promise resolve and Promise reject
+//add resolve property to myPromise
+myPromise.resolve = (val) => {
+  return new myPromise((res, rej) => {
+    res(val);
+  });
+};
+myPromise.reject = (val) => {
+  return new myPromise((res, rej) => {
+    rej(val);
+  });
+};
