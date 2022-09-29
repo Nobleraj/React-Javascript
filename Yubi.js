@@ -11,7 +11,6 @@ const users = [
   { firstName: 'Hari', lastName: 'Prasath', role: 'SSE', age: 30 },
 ];
 // output
-
 // {
 //   SE: [
 //     { name: 'Ram Kumar', age: 40, DOB: '12-20-1981' },
@@ -64,12 +63,37 @@ function roleWithReduce(user, key) {
 console.log(roleWithReduce(users, 'role'));
 
 //setTimeout run after defined second ?
+console.time('time');
+setTimeout(() => console.timeEnd('time'), 200);
+
 //put and patch API
+//POST -  is always for creating a resource ( does not matter if it was duplicated )
+//PUT - is for checking if resource exists then update, else create new resource
+//PATCH - is always for updating a resource
+//GET - read
+//DELETE - delete
+
 //improve performance of web application
+
 //Promise vs async await - fastest to execute
+const prom = new Promise((res, rej) => {
+  //setTimeout(res,2000,"Hello");
+  res('Hello');
+});
+
+(async () => {
+  console.time('async');
+  const ans = await prom;
+  console.timeEnd('async', ans);
+})();
+
+console.time('prom');
+prom.then((res) => {
+  console.timeEnd('prom', res);
+});
 
 //Array destructuring
-let a, b, rrestes;
+let a, b, rest;
 let arr = [1, 2, 3, 4, 6];
 //destructure code
 [a, b, c, ...rest] = arr;
