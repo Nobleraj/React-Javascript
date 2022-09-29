@@ -67,3 +67,15 @@ console.log(roleWithReduce(users, 'role'));
 //put and patch API
 //improve performance of web application
 //Promise vs async await - fastest to execute
+
+//Array destructuring
+let a, b, rrestes;
+let arr = [1, 2, 3, 4, 6];
+//destructure code
+[a, b, c, ...rest] = arr;
+console.log('ans', rest);
+
+let obj = { a: 10, b: 20, c: 30, d: 40 };
+//destructure code
+({ a, b, ...rest } = obj);
+console.log(a, b, rest);
