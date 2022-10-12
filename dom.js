@@ -62,3 +62,18 @@ function secondMax(ar){
 //Email validation
 var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 reg.test("ewfvefefe");
+
+//Virtual DOM Shadow DOM
+/*Virtual DOM is any kind of representation of a real DOM. Virtual DOM is about avoiding unnecessary changes to the DOM, which are expensive performance-wise, because changes to the DOM usually cause re-rendering of the page. It allows to collect several changes to be applied at once, so not every single change causes a re-render, but instead re-rendering only happens once after a set of changes was applied to the DOM.
+
+Shadow DOM is mostly about encapsulation of the implementation. A single custom element can implement more-or-less complex logic combined with more- or-less complex DOM. Shadow DOM refers to the ability of the browser to include a subtree of DOM elements into the rendering of a document, but not into the main document DOM tree. 
+
+Is the Shadow DOM the same as the Virtual DOM?
+No, they are different. The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components. The virtual DOM is a concept implemented by libraries in JavaScript on top of browser APIs.
+*/
+
+//Meta tag 
+
+//fixed position will not occupy any space in the body, so the next element(eg: an image) will be behind the fixed element.
+
+//sticky position occupies the space, so the next element will not be hidden behind it.
