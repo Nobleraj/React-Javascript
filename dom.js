@@ -73,7 +73,16 @@ No, they are different. The Shadow DOM is a browser technology designed primaril
 */
 
 //Meta tag 
+// we can add charcode - UTF-8 to support emoji's in HTML page
+//can tell who's the author of the webpage by adding name and author in meta tag 
+// add description in meat tag - overview of page
+//add viewport in meta tag
 
 //fixed position will not occupy any space in the body, so the next element(eg: an image) will be behind the fixed element.
+//irrespective of scrolling it won't move
+
 
 //sticky position occupies the space, so the next element will not be hidden behind it.
+//it will scroll until offset value given by user
+
+//Webworkes - 
