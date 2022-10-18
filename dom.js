@@ -2,7 +2,7 @@
 //Capture Target Bubble
 
 //Synthetic Event
-//Synthetic events are objects which ascts as a cross browser wrapper around the browser's native event. this combine the behavious of different browsers into one API. this is done to make sure that the events show consistent properties across different browsers.
+//Synthetic events are objects which acts as a cross browser wrapper around the browser's native event. this combine the behavious of different browsers into one API. this is done to make sure that the events show consistent properties across different browsers.
 
 //Tree Shaking
 //Removal of dead code. Removing all the unused imports so that we can make the bundle smaller.
