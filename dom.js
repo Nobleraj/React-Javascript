@@ -4,6 +4,9 @@
 //Synthetic Event
 //Synthetic events are objects which ascts as a cross browser wrapper around the browser's native event. this combine the behavious of different browsers into one API. this is done to make sure that the events show consistent properties across different browsers.
 
+//Tree Shaking
+
+
 //Render to string - it is basically used in server side rendering. In SSR, what happens our html is generated over the server and send to the client.This function(ReactDOMServer.renderToString()) is used to tranfer to send that html as string to the client
 ReactDOMServer.renderToString();
 
