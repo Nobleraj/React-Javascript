@@ -6,6 +6,7 @@
 
 //Tree Shaking
 //Removal of dead code. Removing all the unused imports so that we can make the bundle smaller.
+//can done in ES2015,builder can statically analyse and remove the unused code
 
 
 //Render to string - it is basically used in server side rendering. In SSR, what happens our html is generated over the server and send to the client.This function(ReactDOMServer.renderToString()) is used to tranfer to send that html as string to the client
