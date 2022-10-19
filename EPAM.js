@@ -6,6 +6,7 @@
 //useImperative Handler
 //Synthetic event
 //useLayoutEffect
+//class vs object
 
 //output based questions
 (function () {
@@ -27,5 +28,7 @@ let ob1 = {
 let ob2 = ob1;
 ob2.add.skills = 'Angular';
 
+//React.memo - behing the scene it update like shouldComponentUpdate
 
-//dynamic
+//Is useRef variable render each time if we update the ref value - No
+//dynamically load input from API and render in React component and submit the form
