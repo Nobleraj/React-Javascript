@@ -38,6 +38,8 @@ dynamic([...arr], '');
 
 //console.log(arr[0]("Hi"));
 
+//My code in code sandox
+//https://codesandbox.io/s/ancient-shape-f2n7nz
 /*
 Create a small app where when you click on a button, it hits an API (https://randomuser.me/api/) that gives you a random user.
 
