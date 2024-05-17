@@ -10,6 +10,13 @@
 //10. n+1 problem of graphql
 
 //What is TDD and advantages of TDD?
+//Test-driven development (TDD) is a software development practice where developers write tests before writing code
+//It instructs developers to write new code only when an automated test has failed. As a result, this idea allows developers to take time to analyze the design or the main requirements for the final product before writing the main code
+//Cons
+//Improved code quality:
+//Refactoring
+//fater debugging
+//Test coverage:
 
 //Mutation testing and its use cases?
 //Mutation testing is designed to ensure the quality of a software testing tool
