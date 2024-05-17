@@ -28,3 +28,6 @@
 
 //Handling forms in React vs Angular
 //React Forms require custom implementations for handling asynchronous validation. Form Initialization and Reset: Angular Reactive Forms simplify form initialization and resetting. You can easily set default values for form controls and reset the form to its initial state without manually managing each input field.
+//Cons:
+//Enhanced Form Validation
+//Asynchronous Validation
