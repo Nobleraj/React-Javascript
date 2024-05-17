@@ -1,4 +1,4 @@
-1. Roles and responsibilities in the previous project.
+//1. Roles and responsibilities in the previous project.
 2. How do you handle conflicts?
 3. Workflow of how to handle a feature development using Jira?
 4. What is TDD and advantages of TDD?
