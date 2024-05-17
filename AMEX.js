@@ -25,3 +25,6 @@
 //Statement mutation. Statements are deleted or replaced with a different statement. For example, the statement "A=10 by B=5" is replaced with "A=5 by B=15."
 //Value mutation. Values are changed to find errors. For example, "A= 15" is changed to "A= 10" or "A=25."
 //Decision mutation. Arithmetic or logical operators are changed to detect errors. For example, "(A<B)" is changed to "(A>B)."
+
+//Handling forms in React vs Angular
+//React Forms require custom implementations for handling asynchronous validation. Form Initialization and Reset: Angular Reactive Forms simplify form initialization and resetting. You can easily set default values for form controls and reset the form to its initial state without manually managing each input field.
