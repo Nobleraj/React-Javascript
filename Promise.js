@@ -222,3 +222,59 @@ myPromise.reject = (val) => {
     rej(val);
   });
 };
+
+// Implement auto retry promises (API request) ?
+
+const retryPromises = (fn, retries = 3, delay = 1000) => {
+  return new Promise((resolve, reject) => {
+    const attempt = (count) => {
+      fn()
+        .then(resolve)
+        .catch((err) => {
+          if (count == 1) {
+            return reject(err);
+          }
+          count = count - 1;
+          setTimeout(() => attempt(count), delay);
+        });
+    };
+    attempt(retries);
+  });
+};
+
+//
+
+let attempt = 0;
+const fetchApi = () => {
+  return new Promise((resolve, reject) => {
+    attempt++;
+    console.log('Attempt ' + attempt);
+    if (attempt < 4) {
+      reject('Failed');
+    } else {
+      resolve('Success on ' + attempt);
+    }
+  });
+};
+
+let attempt = 0;
+const data = ['q', 'q', ''];
+
+const fetchApi = () => {
+  attempt++;
+  console.log('Attempt', attempt);
+  return fetch(
+    `https://jsonplaceholder.typicode.com/posts/1${data[attempt - 1]}`
+  ).then((res) => {
+    if (!res.ok) {
+      throw new Error('API failed');
+    }
+    return res.json();
+  });
+};
+
+//
+
+retryPromises(fetchApi, 3, 500)
+  .then((res) => console.log('ans', res))
+  .catch((err) => console.log('err', err));
