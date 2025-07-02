@@ -29,4 +29,7 @@
 // Then comiler send buye code to Execution phase
 // In the mean time, Compiler would optimize the code in runtime (that's y it's JIT)
 
+// Memory Heap => Garbage Collector GC
+// CallStack
+
 // jit  - Just intime compilation
