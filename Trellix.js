@@ -9,3 +9,5 @@
 
 //how micro front end works in front end - any algo like federated renderin
 //how app will be rendered in another app
+
+//performance optimization in web application
