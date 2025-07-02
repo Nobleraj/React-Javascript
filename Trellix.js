@@ -16,7 +16,8 @@
 
 //JRE - Javascript Runtime Environment
 
-//JS Engine -> Parsing -> Compilation -> Execution
+//JS Engine
+// -> Parsing -> Compilation -> Execution
 
 //Parsing -> parse the code
 // Syntax parser -> converts to AST -> Abstarct syntax tree
