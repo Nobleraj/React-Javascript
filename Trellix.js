@@ -35,8 +35,8 @@
 
 // jit  - Just intime compilation
 
-
 // Bazarvoice
 // How and why to choose ChatGPT vs Github Copilot
 // Prepare any complex achievements thing you did
 // Is micro services have different different DB for all services
+// What's going above beyond vs going below
