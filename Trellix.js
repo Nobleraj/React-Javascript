@@ -40,3 +40,4 @@
 // Prepare any complex achievements thing you did
 // Is micro services have different different DB for all services
 // What's going above beyond vs going below
+// how rate limiting can handled if there's billions of user accessging the app, how to store these values in cache and achieve Consistency. Redi ? -> Persisitent, Distrubuted
