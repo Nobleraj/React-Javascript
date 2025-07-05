@@ -33,7 +33,7 @@
 // Memory Heap => Garbage Collector GC
 // CallStack
 
-// jit  - Just intime compilation
+// jit  - Just in-time compilation
 
 // Bazarvoice
 // How and why to choose ChatGPT vs Github Copilot
