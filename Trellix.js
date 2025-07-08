@@ -41,3 +41,30 @@
 // Is micro services have different different DB for all services
 // What's going above beyond vs going below
 // how rate limiting can handled if there's billions of user accessging the app, how to store these values in cache and achieve Consistency. Redi ? -> Persisitent, Distrubuted
+
+// Best Time to Buy and Sell Stock
+// prices = [7,1,5,3,6,4]
+
+// let maxProfit = 0;
+
+// for(var i=0;i<prices.length;i++){
+//   for(var j=i+1;j<prices.length;j++){
+//      if(prises[i] < prices[j]){
+//       maxProfit = Math.max(prices[j] - prises[i],maxProfit);
+//      }
+//   }
+// }
+
+// => n^2
+
+// let min = prices[0];
+// let profix = 0;
+// for(var i=1;i<prices.length;i++){
+//   const curr = prices[i];
+//   profit = Math.max(curr-min,profit);
+//   min = Math.min(min,curr);
+// }
+
+// => n
+
+// design a tiny url service.
