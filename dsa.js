@@ -1,3 +1,17 @@
+//fibanocie series
+//0,0,1,2,3,5,8,13
+const fibonacci = (n) => {
+  const ans = [0, 0]; // start with two 0s
+  for (let i = 1; i < n - 1; i++) {
+    const val =
+      ans[i] + (ans[i - 1] == undefined ? 0 : ans[i - 1] == 0 ? 1 : ans[i - 1]);
+    ans.push(val);
+  }
+  return ans;
+};
+
+console.log('ans', fibonacci(8).join(','));
+
 //Palindrome
 function isPalindrom(str) {
   //var rev = str.split("").reverse().join("");
