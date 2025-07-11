@@ -35,6 +35,12 @@
 
 // jit  - Just in-time compilation
 
+// common js, amd, es
+
+// custom implememtation for deep copy
+
+// pull vs rebase
+
 // Bazarvoice
 // How and why to choose ChatGPT vs Github Copilot
 // Prepare any complex achievements thing you did
