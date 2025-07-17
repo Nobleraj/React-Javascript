@@ -41,6 +41,21 @@
 
 // pull vs rebase
 
+//var x = 10;
+// var y = x++;
+// var z = ++x;
+// console.log(x, y, z);
+
+// Create a JSON visualizer with comparison mode.
+// - user can copy a json and paste into left side input panel
+// - user can copy another json and paste in right side input panel
+// - on "compare" differences get highlighted
+
+// 1. scroll
+
+// - user can pop out the right panel into a new tab.
+// - in new tab, scroll should syncronize with previous tab
+
 // Bazarvoice
 // How and why to choose ChatGPT vs Github Copilot
 // Prepare any complex achievements thing you did
