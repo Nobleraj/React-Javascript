@@ -58,6 +58,7 @@
 
 // why graphQL required
 // node js CORS error
+// require vs import difference why ?
 
 // Bazarvoice
 // How and why to choose ChatGPT vs Github Copilot
