@@ -56,6 +56,9 @@
 // - user can pop out the right panel into a new tab.
 // - in new tab, scroll should syncronize with previous tab
 
+// why graphQL required
+// node js CORS error
+
 // Bazarvoice
 // How and why to choose ChatGPT vs Github Copilot
 // Prepare any complex achievements thing you did
